@@ -1,0 +1,14 @@
+disabled_rules:
+  # you can use -  'swiftlint rules' find
+  - trailing_whitespace
+  - force_cast
+opt_in_rules: 
+  # you can use -  'swiftlint rules' find
+
+included:
+
+excluded:
+  - Pods
+
+line_length: 300
+function_body_length: 100
