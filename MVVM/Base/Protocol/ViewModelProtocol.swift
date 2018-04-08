@@ -58,7 +58,9 @@ extension ViewModelLoadingProtocol where Self: ViewModelDataProtocol, Self: View
         case .initialize, .loadFail:
             status = .loadStart
             if models.isEmpty {
-                loadingStatusDelegate?.showLoading(true)
+                DispatchQueue.main.async {
+                    self.loadingStatusDelegate?.showLoading(true)
+                }
             }
             loadData()
 
@@ -69,7 +71,9 @@ extension ViewModelLoadingProtocol where Self: ViewModelDataProtocol, Self: View
         case .refreshLoading:
             status = .loadStart
             models = []
-            loadingStatusDelegate?.showLoading(true)
+            DispatchQueue.main.async {
+                self.loadingStatusDelegate?.showLoading(true)
+            }
             loadData()
 
         case .loadStart, .loadMoreStart, .noMoreCanLoad:
