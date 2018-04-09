@@ -12,7 +12,6 @@
 		0194DAAF2078081F000328AF /* ViewModelMultipleContentDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DAAE2078081F000328AF /* ViewModelMultipleContentDataProtocol.swift */; };
 		0194DAB12078089B000328AF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DAB02078089B000328AF /* ArrayExtension.swift */; };
 		0194DAB320780D5F000328AF /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DAB220780D5F000328AF /* ClassModel.swift */; };
-		0194DAB520780F6E000328AF /* BaseCodableMultipleContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DAB420780F6E000328AF /* BaseCodableMultipleContentViewModel.swift */; };
 		0194DAB720780FE2000328AF /* SchoolDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DAB620780FE2000328AF /* SchoolDataViewModel.swift */; };
 		0194DABB207817FE000328AF /* SchoolDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DABA207817FE000328AF /* SchoolDataVC.swift */; };
 		0194DABD20781984000328AF /* SchoolDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194DABC20781984000328AF /* SchoolDataCell.swift */; };
@@ -49,7 +48,6 @@
 		0194DAAE2078081F000328AF /* ViewModelMultipleContentDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMultipleContentDataProtocol.swift; sourceTree = "<group>"; };
 		0194DAB02078089B000328AF /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		0194DAB220780D5F000328AF /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
-		0194DAB420780F6E000328AF /* BaseCodableMultipleContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCodableMultipleContentViewModel.swift; sourceTree = "<group>"; };
 		0194DAB620780FE2000328AF /* SchoolDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataViewModel.swift; sourceTree = "<group>"; };
 		0194DABA207817FE000328AF /* SchoolDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataVC.swift; sourceTree = "<group>"; };
 		0194DABC20781984000328AF /* SchoolDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataCell.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				01CFAB7320735FD300720BF6 /* BaseCodableViewModel.swift */,
-				0194DAB420780F6E000328AF /* BaseCodableMultipleContentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -457,7 +454,6 @@
 				01CFAB8F2073720900720BF6 /* GarbageStationInfoViewModel.swift in Sources */,
 				01CFAB6520735C8900720BF6 /* JsonProtocol.swift in Sources */,
 				01CFAB95207372B600720BF6 /* MainVC.swift in Sources */,
-				0194DAB520780F6E000328AF /* BaseCodableMultipleContentViewModel.swift in Sources */,
 				01CFAB802073671200720BF6 /* NoDataView.swift in Sources */,
 				01CFAB7E207366B600720BF6 /* UIColorExtension.swift in Sources */,
 				01CFAB7220735EF400720BF6 /* ViewModelDelegate.swift in Sources */,

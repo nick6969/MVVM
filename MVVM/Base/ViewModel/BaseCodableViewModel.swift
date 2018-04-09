@@ -8,6 +8,8 @@
 
 import Foundation
 
+class BaseCodableMultipleContentViewModel<T>: BaseCodableViewModel<T>, ViewModelMultipleContentDataProtocol where T: MultipleContentProtocol { }
+
 class BaseCodableViewModel<T>: ViewModelDataProtocol where T: JsonModel {
 
     weak var loadingDelegate: ViewModelLoadingDelegate?

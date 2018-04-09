@@ -65,7 +65,7 @@ extension WebService {
         baseRequest(method: .get, url: path, parameters: para, success: success, fail: fail)
     }
 
-    func getLocaleServiceSchoolData(success: DataCompleClosure?, fail: LoadDataFailClosure?) {
+    func getSchoolData(success: DataCompleClosure?, fail: LoadDataFailClosure?) {
         let url = "https://github.com/nick6969/MVVM/blob/master/MVVM/data.json?raw=true"
         baseRequest(method: .get, url: url, parameters: nil, success: success, fail: fail)
     }

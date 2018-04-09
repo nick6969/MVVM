@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ViewModelDataProtocol: class {
-    associatedtype Model
+    associatedtype Model: JsonModel
     var models: [Model] { get set }
     var datasCount: Int { get }
     func model(at index: Int) -> Model?

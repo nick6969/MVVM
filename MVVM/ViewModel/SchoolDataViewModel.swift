@@ -11,7 +11,7 @@ import Foundation
 class SchoolDataViewModel: BaseCodableMultipleContentViewModel<ClassModel>, ViewModelLoadingProtocol, ViewModelLoadingFuncProtocol {
 
     func loadData() {
-        WebService.shared.getLocaleServiceSchoolData(success: dataConvertToModelsClosure, fail: loadingFailClosure)
+        WebService.shared.getSchoolData(success: dataConvertToModelsClosure, fail: loadingFailClosure)
     }
 
     func loadDataMore() {

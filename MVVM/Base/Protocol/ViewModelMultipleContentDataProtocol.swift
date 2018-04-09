@@ -8,14 +8,37 @@
 
 import Foundation
 
-protocol ViewModelMultipleContentDataProtocol: class {
-    associatedtype Model: MultipleContentProtocol
-    var models: [Model] { get set }
+protocol ViewModelMultipleContentDataProtocol: ViewModelDataProtocol where Model: MultipleContentProtocol {
     func numberOfSection() -> Int
     func numberOfItem(in section: Int) -> Int
     func modelAt(section: Int) -> Model?
     func modelAt(indexPath: IndexPath) -> Model.SubModel?
     func isLastData(index: IndexPath) -> Bool
+}
+
+// 防止誤用 更上一層的 Protocol 的 method
+extension ViewModelMultipleContentDataProtocol {
+
+    var datasCount: Int {
+        assert(false, "don't use ViewModelDataProtocol method in ViewModelMultipleContentDataProtocol")
+        return 0
+    }
+
+    func model(at index: Int) -> Model? {
+        assert(false, "don't use ViewModelDataProtocol method in ViewModelMultipleContentDataProtocol")
+        return nil
+    }
+
+    func isLastData(index: Int) -> Bool {
+        assert(false, "don't use ViewModelDataProtocol method in ViewModelMultipleContentDataProtocol")
+        return false
+    }
+
+    func isLoadMore(index: Int) -> Bool {
+        assert(false, "don't use ViewModelDataProtocol method in ViewModelMultipleContentDataProtocol")
+        return false
+    }
+
 }
 
 extension ViewModelMultipleContentDataProtocol {
@@ -38,46 +61,6 @@ extension ViewModelMultipleContentDataProtocol {
 
     func isLastData(index: IndexPath) -> Bool {
         return index.section + 1 == models.count && index.item + 1 == numberOfItem(in: index.section)
-    }
-
-}
-
-extension ViewModelLoadingProtocol where Self: ViewModelMultipleContentDataProtocol, Self: ViewModelLoadingFuncProtocol {
-
-    func refreshData() {
-        if status != .loadStart {
-            status = .refreshLoading
-            nextStatus()
-        }
-    }
-
-    func nextStatus() {
-        switch status {
-        case .initialize, .loadFail:
-            status = .loadStart
-            if models.isEmpty {
-                DispatchQueue.main.async {
-                    self.loadingStatusDelegate?.showLoading(true)
-                }
-            }
-            loadData()
-
-        case .loadDone, .loadMoreDone, .loadMoreFail:
-            status = .loadMoreStart
-            loadDataMore()
-
-        case .refreshLoading:
-            status = .loadStart
-            if models.isEmpty {
-                DispatchQueue.main.async {
-                    self.loadingStatusDelegate?.showLoading(true)
-                }
-            }
-            loadData()
-
-        case .loadStart, .loadMoreStart, .noMoreCanLoad:
-            break
-        }
     }
 
 }
