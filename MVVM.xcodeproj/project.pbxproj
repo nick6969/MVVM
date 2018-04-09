@@ -24,7 +24,7 @@
 		01CFAB6E20735E0100720BF6 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB6D20735E0100720BF6 /* ViewModelProtocol.swift */; };
 		01CFAB7020735E9500720BF6 /* ViewModelStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB6F20735E9500720BF6 /* ViewModelStatusEnum.swift */; };
 		01CFAB7220735EF400720BF6 /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB7120735EF400720BF6 /* ViewModelDelegate.swift */; };
-		01CFAB7420735FD300720BF6 /* BaseCodableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB7320735FD300720BF6 /* BaseCodableViewModel.swift */; };
+		01CFAB7420735FD300720BF6 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB7320735FD300720BF6 /* BaseViewModel.swift */; };
 		01CFAB792073645200720BF6 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB782073645200720BF6 /* BaseVC.swift */; };
 		01CFAB7C2073665800720BF6 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB7B2073665800720BF6 /* EmptyView.swift */; };
 		01CFAB7E207366B600720BF6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFAB7D207366B600720BF6 /* UIColorExtension.swift */; };
@@ -62,7 +62,7 @@
 		01CFAB6D20735E0100720BF6 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		01CFAB6F20735E9500720BF6 /* ViewModelStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelStatusEnum.swift; sourceTree = "<group>"; };
 		01CFAB7120735EF400720BF6 /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
-		01CFAB7320735FD300720BF6 /* BaseCodableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCodableViewModel.swift; sourceTree = "<group>"; };
+		01CFAB7320735FD300720BF6 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		01CFAB782073645200720BF6 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		01CFAB7B2073665800720BF6 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		01CFAB7D207366B600720BF6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		01CFAB6C20735D7B00720BF6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				01CFAB7320735FD300720BF6 /* BaseCodableViewModel.swift */,
+				01CFAB7320735FD300720BF6 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -439,7 +439,7 @@
 			files = (
 				0194DAB12078089B000328AF /* ArrayExtension.swift in Sources */,
 				01A279E720735B6F0045DE1C /* AppDelegate.swift in Sources */,
-				01CFAB7420735FD300720BF6 /* BaseCodableViewModel.swift in Sources */,
+				01CFAB7420735FD300720BF6 /* BaseViewModel.swift in Sources */,
 				01CFAB792073645200720BF6 /* BaseVC.swift in Sources */,
 				01919CBE2073C36A00400B51 /* ChlURLProtocol.swift in Sources */,
 				0194DAAF2078081F000328AF /* ViewModelMultipleContentDataProtocol.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  BaseCodableViewModel.swift
+//  BaseViewModel.swift
 //  MVVM
 //
 //  Created by Nick Lin on 2018/4/3.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-class BaseCodableMultipleContentViewModel<T>: BaseCodableViewModel<T>, ViewModelMultipleContentDataProtocol where T: MultipleContentProtocol { }
+class BaseCodableViewModel<T>: BaseViewModel<T>, ViewModelDataProtocol where T: JsonModel { }
 
-class BaseCodableViewModel<T>: ViewModelDataProtocol where T: JsonModel {
+class BaseCodableMultipleContentViewModel<T>: BaseViewModel<T>, ViewModelMultipleContentDataProtocol where T: MultipleContentProtocol { }
 
+class BaseViewModel<T> where T: JsonModel {
     weak var loadingDelegate: ViewModelLoadingDelegate?
     weak var loadingStatusDelegate: ViewModelLoadingStatusDelegate?
     var status: ViewModelStatus = .initialize
@@ -127,5 +128,4 @@ class BaseCodableViewModel<T>: ViewModelDataProtocol where T: JsonModel {
             break
         }
     }
-
 }
