@@ -8,9 +8,7 @@
 
 import Foundation
 
-protocol ViewModelDataProtocol: class {
-    associatedtype Model: JsonModel
-    var models: [Model] { get set }
+protocol ViewModelDataProtocol: BaseDataProtocol {
     var datasCount: Int { get }
     func model(at index: Int) -> Model?
     func isLastData(index: Int) -> Bool
@@ -42,45 +40,6 @@ protocol ViewModelLoadingProtocol: class {
     var status: ViewModelStatus { get set }
     func refreshData()
     func nextStatus()
-}
-
-extension ViewModelLoadingProtocol where Self: ViewModelDataProtocol, Self: ViewModelLoadingFuncProtocol {
-
-    func refreshData() {
-        if status != .loadStart {
-            status = .refreshLoading
-            nextStatus()
-        }
-    }
-
-    func nextStatus() {
-        switch status {
-        case .initialize, .loadFail:
-            status = .loadStart
-            if models.isEmpty {
-                DispatchQueue.main.async {
-                    self.loadingStatusDelegate?.showLoading(true)
-                }
-            }
-            loadData()
-
-        case .loadDone, .loadMoreDone, .loadMoreFail:
-            status = .loadMoreStart
-            loadDataMore()
-
-        case .refreshLoading:
-            status = .loadStart
-            models = []
-            DispatchQueue.main.async {
-                self.loadingStatusDelegate?.showLoading(true)
-            }
-            loadData()
-
-        case .loadStart, .loadMoreStart, .noMoreCanLoad:
-            break
-        }
-    }
-
 }
 
 protocol ViewModelLoadingFuncProtocol: class {
