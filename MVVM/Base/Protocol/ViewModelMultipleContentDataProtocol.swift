@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias StandardMultipleContentViewModel = ViewModelMultipleContentDataProtocol & ViewModelLoadingProtocol & ViewModelLoadingFuncProtocol
+
 protocol ViewModelMultipleContentDataProtocol: BaseDataProtocol where Model: MultipleContentProtocol {
     func numberOfSection() -> Int
     func numberOfItem(in section: Int) -> Int

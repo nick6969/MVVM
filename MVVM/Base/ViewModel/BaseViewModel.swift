@@ -8,10 +8,6 @@
 
 import Foundation
 
-class BaseCodableViewModel<T>: BaseViewModel<T>, ViewModelDataProtocol where T: JsonModel { }
-
-class BaseCodableMultipleContentViewModel<T>: BaseViewModel<T>, ViewModelMultipleContentDataProtocol where T: MultipleContentProtocol { }
-
 class BaseViewModel<T> where T: JsonModel {
     weak var loadingDelegate: ViewModelLoadingDelegate?
     weak var loadingStatusDelegate: ViewModelLoadingStatusDelegate?

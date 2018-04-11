@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ZipViewModel: BaseCodableViewModel<ZipModel>, ViewModelLoadingProtocol, ViewModelLoadingFuncProtocol {
+class ZipViewModel: BaseViewModel<ZipModel>, StandardViewModel {
 
     func loadData() {
         WebService.shared.getZipData(success: dataConvertToModelsClosure, fail: loadingFailClosure)

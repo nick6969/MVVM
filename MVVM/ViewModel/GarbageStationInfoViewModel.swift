@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GarbageStationInfoViewModel: BaseCodableViewModel<GarbageStationInfoModel>, ViewModelLoadingProtocol, ViewModelLoadingFuncProtocol {
+class GarbageStationInfoViewModel: BaseViewModel<GarbageStationInfoModel>, StandardViewModel {
 
     fileprivate var area: String = String()
 

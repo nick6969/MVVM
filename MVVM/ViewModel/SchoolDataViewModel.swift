@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SchoolDataViewModel: BaseCodableMultipleContentViewModel<ClassModel>, ViewModelLoadingProtocol, ViewModelLoadingFuncProtocol {
+class SchoolDataViewModel: BaseViewModel<ClassModel>, StandardMultipleContentViewModel {
 
     func loadData() {
         WebService.shared.getSchoolData(success: dataConvertToModelsClosure, fail: loadingFailClosure)

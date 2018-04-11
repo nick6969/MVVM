@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias StandardViewModel = ViewModelDataProtocol & ViewModelLoadingProtocol & ViewModelLoadingFuncProtocol
+
 protocol ViewModelDataProtocol: BaseDataProtocol {
     var datasCount: Int { get }
     func model(at index: Int) -> Model?
