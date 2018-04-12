@@ -9,7 +9,7 @@
 import Foundation
 
 protocol BaseDataProtocol: class {
-    associatedtype Model: JsonModel
+    associatedtype Model
     var models: [Model] { get set }
 }
 

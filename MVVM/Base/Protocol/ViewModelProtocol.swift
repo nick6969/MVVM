@@ -10,7 +10,7 @@ import Foundation
 
 typealias StandardViewModel = ViewModelDataProtocol & ViewModelLoadingProtocol & ViewModelLoadingFuncProtocol
 
-protocol ViewModelDataProtocol: BaseDataProtocol {
+protocol ViewModelDataProtocol: BaseDataProtocol where Model: JsonModel {
     var datasCount: Int { get }
     func model(at index: Int) -> Model?
     func isLastData(index: Int) -> Bool
